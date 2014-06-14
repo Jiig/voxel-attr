@@ -26,7 +26,9 @@ Simple attribute (think DnD) module for voxel.js
     ```
 ####Methods
 * get('attr') -- Returns list of values for given attribute from dictionart
+    * You can also use getMin, getMax, etc. These return a int
 * set('attr', [current, min, max, mod]) -- Sets the values for given attribute to given list
+    * You can also use setMin, setMax, etc. These take attribute name and single value
 * mod('attr') -- sets the mod value of given attr, you can change this by passing it into the options
 * inc('attr', value) -- Increases the current value of given attribute by value
 * dec('attr', value) -- Decreases the current value of given attribute by value

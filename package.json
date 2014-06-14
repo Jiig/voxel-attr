@@ -1,0 +1,22 @@
+{
+  "name": "voxel-attr",
+  "version": "0.1.0",
+  "description": "Simple attribute (think DnD) system for voxel.js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jiig/voxel-attr.git"
+  },
+  "scripts": {
+    "test": "test.js"
+  },
+  "keywords": [
+    "voxel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "inherits": "^2.0.1",
+    "tape": "^2.13.3"
+  }
+}

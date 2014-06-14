@@ -3,6 +3,8 @@ voxel-attr
 
 Simple attribute (think DnD) module for voxel.js
 
+[![Build Status](https://travis-ci.org/Jiig/voxel-attr.svg?branch=master)](https://travis-ci.org/Jiig/voxel-attr)
+
 ## How-to
 * Load with voxel-plugins
 

@@ -22,4 +22,17 @@ function defaults(t) {
     t.end()
 }
 
+function addingAndRemoving(t) {
+    a = attr(new Game(), {})
+    a.addAttr('test', [2, 2, 2, 2])
+    t.deepEqual(a.get('test'), [2, 2, 2, 2])
+    a.set('test', [3, 3, 3, 3])
+    t.deepEqual(a.get('test'), [3, 3, 3, 3])
+    a.rmAttr('test')
+    t.equals(a.get('test'), undefined)
+
+    t.end()
+}
+
 test('defaults', defaults)
+test('addingAndRemoving', addingAndRemoving)

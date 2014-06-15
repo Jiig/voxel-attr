@@ -52,6 +52,8 @@ Attr.prototype.getMod = function(attr) {
 }
 
 Attr.prototype.set = function(attr, values) {
+    if (values === undefined) values = [1, 0, 99, 0]
+    else if (values.length != 4) throw new Error('voxel-attr too few values for creaing an attribute, needs 4 got ' + values.length)
     this.attr_d[attr] = values
 }
 
@@ -87,5 +89,19 @@ Attr.prototype.inc = function(attr, value) {
 Attr.prototype.dec = function(attr, value) {
     this.attr_d[attr][0]-=value
     this.emit('attrdec', attr, this.attr_d[attr][0], value)
+}
+
+Attr.prototype.addAttr = function(attrname, values) {
+    if (values === undefined) values = [1, 0, 99, 0]
+    else if (values.length != 4) throw new Error('voxel-attr too few values for creaing an attribute, needs 4 got ' + values.length)
+    this.attr_d[attrname] = values
+    this.emit('attradd', attrname, values)
+}
+
+Attr.prototype.rmAttr = function(attrname) {
+    if (this.attr_d[attrname] !== undefined) {
+        this.attr_d[attrname] = undefined
+        this.emit('attrrm', attrname)
+    }
 }
 
